@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pEv-e8-2Wm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2m3-CS-UFR">
+            <objects>
+                <navigationController id="pEv-e8-2Wm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mcE-TU-Eht">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8SQ-WY-Zuh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zq2-DC-lL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-634" y="-427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuB-Bc-sMD">
+                                <rect key="frame" x="125" y="284" width="125" height="99"/>
+                                <color key="backgroundColor" red="0.74004125309271385" green="1" blue="0.45557798331499921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PuB-Bc-sMD" secondAttribute="height" multiplier="125:99" id="UNH-PT-sKx"/>
+                                    <constraint firstAttribute="width" constant="125" id="lWF-B1-uo9"/>
+                                </constraints>
+                                <state key="normal" title="点击跳转"/>
+                                <connections>
+                                    <action selector="pushViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Dp-cp-bVb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PuB-Bc-sMD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="746-s1-KAY"/>
+                            <constraint firstItem="PuB-Bc-sMD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LJK-DF-XD7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zKa-4J-Lmj"/>
+                    <connections>
+                        <outlet property="pushBtn" destination="PuB-Bc-sMD" id="IXM-sx-z94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.399999999999999" y="-427.73613193403304"/>
+        </scene>
+    </scenes>
+</document>
